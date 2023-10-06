@@ -232,7 +232,7 @@ sub print_summary {
             $total_score = 0;
         } else {
             if ($total_num >= $target_total[$i]) {
-                $total_score = 40 * @scene_percent[$i];
+                $total_score = 20 * @scene_percent[$i];
             } else {
                 if ($total_num  <= 0.0000001) {
                     $total_score = 0;
@@ -242,12 +242,12 @@ sub print_summary {
                 }
             }
             if ($tree_num  >= $target_tree[$i]) {
-                $tree_score = 10 * @scene_percent[$i];
+                $tree_score = 20 * @scene_percent[$i];
             } else {
                 if ($tree_num  <= 0.0000001) {
                     $tree_score = 0;
                 } else {
-                   $tree_score = (10 * @scene_percent[$i]) * ($tree_num/$target_tree[$i]);
+                   $tree_score = (20 * @scene_percent[$i]) * ($tree_num/$target_tree[$i]);
 
                 }
             }
@@ -266,4 +266,3 @@ sub print_summary {
         print "\nCORRECTNESS FAILED - SCORE: 0\n";
     }
 }
-
